@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+    int a,b,r;
+    char op;
+    printf("Enter any two numbers:\n");
+    scanf("%d%d",&a,&b);
+    printf("Enter any operator:");
+    scanf(" %c",&op);
+    switch(op)
+    {
+        case'+':r=a+b;
+        printf("Addition:%d",r);
+        break;
+        
+        case'-':r=a-b;
+        printf("Subrtraction:%d",r);
+        break;
+        
+        case'*':r=a*b;
+        printf("Multiplication:%d",r);
+        break;
+        
+        case'/':r=a/b;
+        printf("Division:%d",r);
+        break;
+        
+        default:printf("wrong choice.");
+    }
+    return 0;
+}
