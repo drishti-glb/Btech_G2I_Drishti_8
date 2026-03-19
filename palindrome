@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int dig, n, rev, pal;
+    int dig, n, rev=0, pal=0;
     printf("Enter the number:\t");
     scanf("%d",&n);
     pal=n;
