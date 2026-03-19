@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    int i, n, a[n], s=0;
+    printf("Enter the size of the array:\t");
+    scanf("%d",&n);
+    
+    printf("Enter the elements of the array:\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        s+=a[i];
+    }
+    printf("The sum of the elements in array is:\t%d",s);
+    return 0;
+}
