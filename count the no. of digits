@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int n, dig, c=0;
+    printf("Enter the number:\t");
+    scanf("%d",&n);
+    
+   while(n>0)
+    {
+        dig=n%10;
+        n=n/10;
+        c++;
+    }
+    printf("The number of digits in the number are:\t%d",c);
+    return 0;
+}
