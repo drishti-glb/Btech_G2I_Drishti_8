@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int x,y,result=1;
+    printf("Enter the base:\t");
+    scanf("%d",&x);
+    printf("Enter the power:\t");
+    scanf("%d",&y);
+    
+   while(y!=0)
+    {
+        result*=x;
+        y--;
+    }
+    printf("x^y:\t%d",result);
+    return 0;
+}
