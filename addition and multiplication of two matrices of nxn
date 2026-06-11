@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, i, j, k;
+
+    printf("Enter order of matrix (n): ");
+    scanf("%d", &n);
+
+    int a[n][n], b[n][n], add[n][n], mul[n][n];
+
+    // Input matrix A
+    printf("Enter elements of matrix A:\n");
+    for (i = 0; i < n; i++)
+        for (j = 0; j < n; j++)
+            scanf("%d", &a[i][j]);
+
+    // Input matrix B
+    printf("Enter elements of matrix B:\n");
+    for (i = 0; i < n; i++)
+        for (j = 0; j < n; j++)
+            scanf("%d", &b[i][j]);
+
+    // Addition
+    for (i = 0; i < n; i++)
+        for (j = 0; j < n; j++)
+            add[i][j] = a[i][j] + b[i][j];
+
+    // Multiplication
+    for (i = 0; i < n; i++)
+        for (j = 0; j < n; j++)
+        {
+            mul[i][j] = 0;
+            for (k = 0; k < n; k++)
+                mul[i][j] += a[i][k] * b[k][j];
+        }
+
+    // Print Addition
+    printf("\nAddition of matrices:\n");
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+            printf("%4d", add[i][j]);
+        printf("\n");
+    }
+
+    // Print Multiplication
+    printf("\nMultiplication of matrices:\n");
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+            printf("%4d", mul[i][j]);
+        printf("\n");
+    }
+
+    return 0;
+}
